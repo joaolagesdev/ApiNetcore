@@ -7,10 +7,8 @@ C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Service\obj\Debug\netcoreapp3
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Service\obj\Debug\netcoreapp3.1\Service.dll
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Service\obj\Debug\netcoreapp3.1\Service.pdb
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Service\obj\Debug\netcoreapp3.1\Service.csprojAssemblyReference.cache
-C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Service\bin\Debug\netcoreapp3.1\CrossCutting.dll
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Service\bin\Debug\netcoreapp3.1\Data.dll
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Service\bin\Debug\netcoreapp3.1\Domain.dll
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Service\bin\Debug\netcoreapp3.1\Domain.pdb
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Service\bin\Debug\netcoreapp3.1\Data.pdb
-C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Service\bin\Debug\netcoreapp3.1\CrossCutting.pdb
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Service\obj\Debug\netcoreapp3.1\Service.csproj.CopyComplete

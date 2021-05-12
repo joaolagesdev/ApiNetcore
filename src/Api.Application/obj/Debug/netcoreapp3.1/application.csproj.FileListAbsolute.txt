@@ -24,7 +24,6 @@ C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\obj\Debug\netcore
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\obj\Debug\netcoreapp3.1\application.dll
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\obj\Debug\netcoreapp3.1\application.pdb
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\obj\Debug\netcoreapp3.1\application.genruntimeconfig.cache
-C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
@@ -39,7 +38,6 @@ C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcore
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
-C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
@@ -73,3 +71,9 @@ C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcore
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Service.pdb
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\CrossCutting.pdb
 C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Data.pdb
+C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\HP\Documents\Projetos\api_netcore\src\Api.Application\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll

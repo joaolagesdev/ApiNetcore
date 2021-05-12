@@ -10,8 +10,15 @@ namespace Application.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-       [HttpGet]
-       public async Task<ActionResult> GetAll([FromServices] IProductService service)
+        //private IProductService _service;
+        //public ProductsController(IProductService service)
+        //{
+        //    _service = service;
+        //}
+
+        [HttpGet]
+        // public async Task<ActionResult> GetAll() { }
+        public async Task<ActionResult> GetAll([FromServices] IProductService service)
         {
             if (!ModelState.IsValid)
             {
@@ -20,6 +27,7 @@ namespace Application.Controllers
 
             try
             {
+                // return Ok(await service.GetAll());
                 return Ok(await service.GetAll());
             }
             catch (ArgumentException e) // Tratar erros de controllers
