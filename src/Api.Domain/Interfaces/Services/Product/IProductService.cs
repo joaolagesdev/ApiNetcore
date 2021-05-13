@@ -9,8 +9,8 @@ namespace Domain.Interfaces.Services.Product
     {
         Task<ProductEntity> Get(Guid id);
         Task<IEnumerable<ProductEntity>> GetAll();
-        Task<ProductEntity> Post(ProductEntity user);
-        Task<ProductEntity> Put(ProductEntity user);
+        Task<ProductEntity> Post(ProductEntity product);
+        Task<ProductEntity> Put(ProductEntity product);
         Task<bool> Delete(Guid id);
     }
 }

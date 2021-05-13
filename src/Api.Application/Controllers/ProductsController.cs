@@ -1,3 +1,4 @@
+using Domain.Entities;
 using Domain.Interfaces.Services.Product;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -31,7 +32,7 @@ namespace Application.Controllers
             {
                 return Ok(await _service.GetAll());
             }
-            catch (ArgumentException e) 
+            catch (ArgumentException e)
             {
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
@@ -56,5 +57,32 @@ namespace Application.Controllers
             }
         }
 
+        [HttpPost]
+        public async Task<ActionResult> Post([FromBody] ProductEntity product)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var result = await _service.Post(product);
+
+                if (result != null)
+                {
+                    return Created(new Uri(Url.Link("GetById", new { id = result.Id })), result);
+                }
+                else
+                {
+                    return BadRequest();
+                }
+            }
+            catch (ArgumentException e)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
+            }
+
+        }
     }
 }

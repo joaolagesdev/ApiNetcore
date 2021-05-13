@@ -3,7 +3,6 @@ using Domain.Interfaces;
 using Domain.Interfaces.Services.Product;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Service.Services
@@ -32,14 +31,14 @@ namespace Service.Services
             return await _repository.SelectAsync();
         }
 
-        public async Task<ProductEntity> Post(ProductEntity user)
-        {   // Pode aplicar uma regra de negócio
-            return await _repository.InsertAsync(user);
+        public async Task<ProductEntity> Post(ProductEntity product)
+        {   
+            return await _repository.InsertAsync(product);
         }
 
-        public async Task<ProductEntity> Put(ProductEntity user)
+        public async Task<ProductEntity> Put(ProductEntity product)
         {
-            return await _repository.UpdateAsync(user);
+            return await _repository.UpdateAsync(product);
         }
     }
 }
