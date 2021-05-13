@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Domain.Models;
 
 namespace CrossCutting.Mappings
 {
@@ -10,7 +8,7 @@ namespace CrossCutting.Mappings
     {
         public ModelToEntityProfile()
         {
-            CreateMap<ProductEntity, UserModel>()
+            CreateMap<ProductEntity, ProductModel>()
                 .ReverseMap();
         }
     }

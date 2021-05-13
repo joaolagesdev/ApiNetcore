@@ -1,6 +1,9 @@
-﻿using Domain.Entities;
+﻿using AutoMapper;
+using Domain.Dtos;
+using Domain.Entities;
 using Domain.Interfaces;
 using Domain.Interfaces.Services.Product;
+using Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -9,11 +12,15 @@ namespace Service.Services
 {
     public class ProductService : IProductService
     {
-        private IRepository<ProductEntity> _repository; // Subistituição do <T>
+        private IRepository<ProductEntity> _repository;
 
-        public ProductService(IRepository<ProductEntity> repository) // Injeção 
+        private readonly IMapper _mapper;
+
+
+        public ProductService(IRepository<ProductEntity> repository, IMapper mapper) // Injeção 
         {
             _repository = repository;
+            _mapper = mapper;
         }
 
         public async Task<bool> Delete(Guid id)
@@ -21,24 +28,32 @@ namespace Service.Services
             return await _repository.DeleteAsync(id);
         }
 
-        public async Task<ProductEntity> Get(Guid id)
+        public async Task<ProductDTO> Get(Guid id)
         {
-            return await _repository.SelectAsync(id);
+            var entity = await _repository.SelectAsync(id);
+            return _mapper.Map<ProductDTO>(entity);
         }
 
-        public async Task<IEnumerable<ProductEntity>> GetAll()
+        public async Task<IEnumerable<ProductDTO>> GetAll()
         {
-            return await _repository.SelectAsync();
+            var listEntities = await _repository.SelectAsync();
+            return _mapper.Map<IEnumerable<ProductDTO>>(listEntities);
         }
 
-        public async Task<ProductEntity> Post(ProductEntity product)
-        {   
-            return await _repository.InsertAsync(product);
+        public async Task<ProductCreateResultDTO> Post(ProductDTO product)
+        {
+            var model = _mapper.Map<ProductModel>(product);
+            var entity = _mapper.Map<ProductEntity>(model);
+            var result = await _repository.InsertAsync(entity);
+            return _mapper.Map<ProductCreateResultDTO>(result);
         }
 
-        public async Task<ProductEntity> Put(ProductEntity product)
+        public async Task<ProductUpdateResultDTO> Put(ProductDTO product)
         {
-            return await _repository.UpdateAsync(product);
+            var model = _mapper.Map<ProductModel>(product);
+            var entity = _mapper.Map<ProductEntity>(model);
+            var result = await _repository.UpdateAsync(entity);
+            return _mapper.Map<ProductUpdateResultDTO>(result);
         }
     }
 }
