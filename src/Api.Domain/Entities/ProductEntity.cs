@@ -4,19 +4,7 @@
     {
         public string Name { get; set; }
         public string Description { get; set; }
-
-        private decimal price;
-        public decimal Price
-        {
-            get { return price; }
-            set { price = Price; }
-        }
-
-        private int quantity;
-        public int Quantity
-        {
-            get { return quantity; }
-            set { quantity = Quantity; }
-        }
+        public decimal Price { get; set; }
+        public int Quantity { get; set; }  
     }
 }
