@@ -1,3 +1,4 @@
+using Domain.Dtos;
 using Domain.Entities;
 using Domain.Interfaces.Services.Product;
 using Microsoft.AspNetCore.Mvc;
@@ -58,7 +59,7 @@ namespace Application.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] ProductEntity product)
+        public async Task<ActionResult> Post([FromBody] ProductDTO product)
         {
             if (!ModelState.IsValid)
             {
@@ -85,7 +86,7 @@ namespace Application.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> Put([FromBody] ProductEntity product)
+        public async Task<ActionResult> Put([FromBody] ProductDTO product)
         {
             if (!ModelState.IsValid)
             {

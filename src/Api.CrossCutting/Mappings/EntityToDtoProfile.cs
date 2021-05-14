@@ -4,7 +4,7 @@ using Domain.Entities;
 
 namespace CrossCutting.Mappings
 {
-    class EntityToDtoProfile : Profile
+    public class EntityToDtoProfile : Profile
     {
         public EntityToDtoProfile()
         {

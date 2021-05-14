@@ -14,9 +14,9 @@ namespace Domain.Models
             set { id = value; }
         }
 
-        private int name;
+        private string name;
 
-        public int Name
+        public string Name
         {
             get { return name; }
             set { name = value; }

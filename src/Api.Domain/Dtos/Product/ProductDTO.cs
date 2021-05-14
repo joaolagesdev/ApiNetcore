@@ -10,7 +10,6 @@ namespace Domain.Dtos
         
         [StringLength(100, ErrorMessage = "O nome deve ter no máximo {1} caracteres")]
         public string Description { get; set; }
-        
         public decimal Price { get; set; }
         public int Quantity { get; set; }
     }

@@ -5,6 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using CrossCutting.DependencyInjection;
+using CrossCutting.Mappings;
+using AutoMapper;
 
 namespace application
 {
@@ -22,6 +24,16 @@ namespace application
         {
             ConfigureService.ConfigureDependenciesService(services);
             ConfigureRepository.ConfigureDependenciesRepository(services);
+
+            var config = new AutoMapper.MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new DtoToModelProfile());
+                cfg.AddProfile(new EntityToDtoProfile());
+                cfg.AddProfile(new ModelToEntityProfile());
+            });
+
+            IMapper mapper = config.CreateMapper();
+            services.AddSingleton(mapper);
 
             // Podemos implementar aqui direto também
             // Ideal é responsabilizar a CrossCutting
