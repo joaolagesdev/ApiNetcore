@@ -8,7 +8,7 @@ namespace Domain.Entities
     {
         public decimal Discount { get; set; }
         [Required]
-        public int Quantity { get; set; }
+        public int QuantityItems { get; set; }
         public decimal TotalValue { get; set; }
         [Required]
         public Guid ProductId { get; set; }
