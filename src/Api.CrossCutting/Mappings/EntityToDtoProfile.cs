@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Domain.Dtos;
+using Domain.Dtos.Product;
 using Domain.Entities;
 
 namespace CrossCutting.Mappings

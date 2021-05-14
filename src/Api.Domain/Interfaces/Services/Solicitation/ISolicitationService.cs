@@ -7,10 +7,10 @@ namespace Domain.Interfaces.Services.Solicitation
 {
     interface ISolicitationService
     {
-        Task<SolicitationEntity> Get(Guid id);
+        Task<ItensSolicitationEntity> Get(Guid id);
         Task<IEnumerable<ProductEntity>> GetAll();
-        Task<SolicitationEntity> Post(SolicitationEntity solicitation);
-        Task<SolicitationEntity> Put(SolicitationEntity solicitation);
+        Task<ItensSolicitationEntity> Post(ItensSolicitationEntity solicitation);
+        Task<ItensSolicitationEntity> Put(ItensSolicitationEntity solicitation);
         Task<bool> Delete(Guid id);
     }
 }

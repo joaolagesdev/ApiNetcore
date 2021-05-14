@@ -1,17 +1,13 @@
-﻿
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+
 namespace Domain.Entities
 {
-    public class SolicitationEntity : BaseEntity
+    public class SolicitationEntity
     {
+        [MaxLength(40)]
         public string Client { get; set; }
-
-        private decimal solicitationValue;
-        public decimal SolicitationValue
-        {
-            get { return solicitationValue; }
-            set { solicitationValue = SolicitationValue; }
-        }
-
-        public char situation; // Enum
+        public decimal TotalValue { get; set; }
+        public IEnumerable<ItemsSolicitationEntity> ItemsSolicitation { get; set; }
     }
 }

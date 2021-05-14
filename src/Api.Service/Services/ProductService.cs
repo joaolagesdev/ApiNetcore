@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Domain.Dtos;
+using Domain.Dtos.Product;
 using Domain.Entities;
 using Domain.Interfaces;
 using Domain.Interfaces.Services.Product;
@@ -40,7 +41,7 @@ namespace Service.Services
             return _mapper.Map<IEnumerable<ProductDTO>>(listEntities);
         }
 
-        public async Task<ProductCreateResultDTO> Post(ProductDTO product)
+        public async Task<ProductCreateResultDTO> Post(ProductCreateDTO product)
         {
             var model = _mapper.Map<ProductModel>(product);
             var entity = _mapper.Map<ProductEntity>(model);
@@ -48,7 +49,7 @@ namespace Service.Services
             return _mapper.Map<ProductCreateResultDTO>(result);
         }
 
-        public async Task<ProductUpdateResultDTO> Put(ProductDTO product)
+        public async Task<ProductUpdateResultDTO> Put(ProductUpdateDTO product)
         {
             var model = _mapper.Map<ProductModel>(product);
             var entity = _mapper.Map<ProductEntity>(model);
