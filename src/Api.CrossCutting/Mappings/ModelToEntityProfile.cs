@@ -8,7 +8,10 @@ namespace CrossCutting.Mappings
     {
         public ModelToEntityProfile()
         {
-            CreateMap<ProductEntity, ProductModel>()
+            CreateMap<ProductModel, ProductEntity>()
+                .ReverseMap();
+
+            CreateMap<ItemsSolicitationModel,ItemsSolicitationEntity>()
                 .ReverseMap();
         }
     }

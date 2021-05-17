@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Domain.Dtos;
+using Domain.Dtos.ItemsSolicitation;
 using Domain.Dtos.Product;
 using Domain.Models;
 
@@ -16,6 +17,12 @@ namespace CrossCutting.Mappings
                 .ReverseMap();
 
             CreateMap<ProductModel, ProductUpdateDTO>() 
+                .ReverseMap();
+
+            CreateMap<ItemsSolicitationModel, ItemsSolicitationDTO>() 
+                .ReverseMap();
+
+            CreateMap<ItemsSolicitationModel, ItemsSolicitationCreateDTO>()
                 .ReverseMap();
         }
     }
