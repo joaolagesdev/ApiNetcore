@@ -4,16 +4,8 @@ using System.Text;
 
 namespace Domain.Models
 {
-    public class ProductModel
+    public class ProductModel : BaseModel
     {
-        private Guid id;
-
-        public Guid Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
-
         private string name;
 
         public string Name
@@ -27,7 +19,7 @@ namespace Domain.Models
         public string Description
         {
             get { return description; }
-            set { description = value; }
+            set { description = string.IsNullOrEmpty(value) ? "S/N" : value; }
         }
 
         private decimal price;
@@ -44,21 +36,6 @@ namespace Domain.Models
         {
             get { return quantity; }
             set { quantity = value; }
-        }
-
-        private DateTime createdAt;
-
-        public DateTime CreatedAt
-        {
-            get { return createdAt; }
-            set { createdAt = value == null ? DateTime.UtcNow : value; }
-        }
-        
-        private DateTime updateAt;
-        public DateTime UpdateAt
-        {
-            get { return updateAt; }
-            set { updateAt = value == null ? DateTime.UtcNow : value; }
         }
     }
 }
