@@ -11,14 +11,6 @@ namespace Domain.Models
             set { quantity = value; }
         }
 
-        private decimal discount;
-        public decimal Discount
-        {
-            get { return discount; }
-            set { discount = value; }
-        }
-
-        //Atualizar valor total
         private decimal totalValue;
         public decimal TotalValue
         {

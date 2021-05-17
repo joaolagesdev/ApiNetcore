@@ -15,6 +15,8 @@ namespace Data.Context
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<ProductEntity>(new ProductMap().Configure);
+            modelBuilder.Entity<ItemsSolicitationEntity>(new ItemsSolicitationMap().Configure);
+            modelBuilder.Entity<SolicitationEntity>(new SolicitationMap().Configure);
         }
     }
 }

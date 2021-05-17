@@ -7,6 +7,7 @@ namespace Domain.Entities
     {
         [Required]
         public decimal TotalValue { get; set; }
+        public decimal Shipping { get; set; }
         public IEnumerable<ItemsSolicitationEntity> ItemsSolicitation { get; set; }
     }
 }

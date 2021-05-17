@@ -6,8 +6,6 @@ namespace Domain.Entities
 {
     public class ItemsSolicitationEntity : BaseEntity
     {
-        public decimal Discount { get; set; }
-        [Required]
         public int Quantity { get; set; }
         [Required]
         public decimal TotalValue { get; set; }
@@ -16,5 +14,6 @@ namespace Domain.Entities
         [Required]
         public Guid SolicitationId { get; set; }
         public ProductEntity Product { get; set; }
+        public SolicitationEntity Solicitation { get; set; }
     }
 }
