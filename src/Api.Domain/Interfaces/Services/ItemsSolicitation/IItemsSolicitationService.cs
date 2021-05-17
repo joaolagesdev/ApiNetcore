@@ -8,7 +8,7 @@ namespace Domain.Interfaces.Services.ItemsSolicitation
     interface IItemsSolicitationService
     {
         Task<ItemsSolicitationDTO> Get(Guid id);
-        Task<ItemsSolicitationDTO> GetByProductId(Guid id);
+        Task<ItemsSolicitationDTO> GetProductById(Guid id);
         Task<IEnumerable<ItemsSolicitationDTO>> GetAll();
         Task<ItemsSolicitationCreateResultDTO> Post(ItemsSolicitationCreateDTO product);
     }
