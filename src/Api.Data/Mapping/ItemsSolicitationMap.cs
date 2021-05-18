@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 namespace Data.Mapping
 {
     public class ItemsSolicitationMap : IEntityTypeConfiguration<ItemsSolicitationEntity>
-    {   
+    {
         // Como já implementamos required na entity, não precisamos mapear aqui
         public void Configure(EntityTypeBuilder<ItemsSolicitationEntity> builder)
         {
@@ -16,7 +16,7 @@ namespace Data.Mapping
                 .WithMany(i => i.ItemsSolicitation);
 
             builder.HasOne(s => s.Solicitation)
-                .WithMany(i => i.ItemsSolicitation);
+                 .WithMany(i => i.ItemsSolicitation);
         }
     }
 }

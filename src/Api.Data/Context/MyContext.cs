@@ -11,6 +11,9 @@ namespace Data.Context
         {
         }
         public DbSet<ProductEntity> Products { get; set; }
+        public DbSet<ItemsSolicitationEntity> ItemsSolicitation { get; set; }
+
+        public DbSet<SolicitationEntity> Solicitation { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
