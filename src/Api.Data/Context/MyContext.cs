@@ -12,7 +12,6 @@ namespace Data.Context
         }
         public DbSet<ProductEntity> Products { get; set; }
         public DbSet<ItemsSolicitationEntity> ItemsSolicitation { get; set; }
-
         public DbSet<SolicitationEntity> Solicitation { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -20,6 +19,8 @@ namespace Data.Context
             modelBuilder.Entity<ProductEntity>(new ProductMap().Configure);
             modelBuilder.Entity<ItemsSolicitationEntity>(new ItemsSolicitationMap().Configure);
             modelBuilder.Entity<SolicitationEntity>(new SolicitationMap().Configure);
+            modelBuilder.Entity<ItemsSolicitationEntity>().HasKey(pk => new { pk.ProductId });
+            modelBuilder.Entity<ItemsSolicitationEntity>().HasKey(pk => new { pk.ItemsSolicitationId });
         }
     }
 }

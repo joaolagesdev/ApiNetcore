@@ -19,12 +19,15 @@ namespace Data.Migrations
 
             modelBuilder.Entity("Domain.Entities.ItemsSolicitationEntity", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("ItemsSolicitationId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime(6)");
+
+                    b.Property<Guid>("Id")
+                        .HasColumnType("char(36)");
 
                     b.Property<Guid>("ProductId")
                         .HasColumnType("char(36)");
@@ -32,7 +35,7 @@ namespace Data.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("SolicitationId")
+                    b.Property<Guid?>("SolicitationId")
                         .HasColumnType("char(36)");
 
                     b.Property<decimal>("TotalValue")
@@ -41,7 +44,7 @@ namespace Data.Migrations
                     b.Property<DateTime?>("UpdateAt")
                         .HasColumnType("datetime(6)");
 
-                    b.HasKey("Id");
+                    b.HasKey("ItemsSolicitationId");
 
                     b.HasIndex("ProductId");
 
@@ -118,9 +121,7 @@ namespace Data.Migrations
 
                     b.HasOne("Domain.Entities.SolicitationEntity", "Solicitation")
                         .WithMany("ItemsSolicitation")
-                        .HasForeignKey("SolicitationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SolicitationId");
                 });
 #pragma warning restore 612, 618
         }
