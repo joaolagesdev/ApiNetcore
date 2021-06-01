@@ -56,5 +56,33 @@ namespace Service.Services
             var result = await _repository.UpdateAsync(entity);
             return _mapper.Map<ProductUpdateResultDTO>(result);
         }
+
+        public async Task<bool> DebitQuantity(Guid productId, int quantity)
+        {
+            var product = await _repository.SelectAsync(productId);
+
+            if (product == null) return false;
+
+            if (!product.HasQuantity(quantity)) return false;
+
+            product.DebitQuantity(quantity);
+
+            await _repository.UpdateAsync(product);
+
+            return true;
+        }
+
+        public async Task<bool> IncreaseQuantity(Guid productId, int quantity)
+        {
+            var product = await _repository.SelectAsync(productId);
+
+            if (product == null) return false;
+
+            product.IncreaseQuantity(quantity);
+
+            await _repository.UpdateAsync(product);
+
+            return true;
+        }
     }
 }

@@ -13,5 +13,21 @@ namespace Domain.Entities
         public decimal Price { get; set; }
         public int Quantity { get; set; }
         public IEnumerable<ItemsSolicitationEntity> ItemsSolicitation { get; set; }
+
+        public void DebitQuantity(int quantity)
+        {
+            if (quantity < 0) quantity *= -1;
+            Quantity -= quantity;
+        }
+
+        public void IncreaseQuantity(int quantity)
+        {
+            Quantity += quantity;
+        }
+
+        public bool HasQuantity(int quantity)
+        {
+            return Quantity >= quantity;
+        }
     }
 }

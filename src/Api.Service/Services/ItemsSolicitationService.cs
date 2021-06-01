@@ -41,5 +41,20 @@ namespace Service.Services
             var result = await _repository.InsertAsync(entity);
             return _mapper.Map<ItemsSolicitationCreateResultDTO>(result);
         }
+
+        public async Task<bool> CalculateTotalValue(Guid productId, int quantity)
+        {
+            var itemsSolicitation = await _repository.SelectAsync(productId);
+
+            if (itemsSolicitation == null) return false;
+
+            // if (!product.HasQuantity(quantity)) return false;
+
+            itemsSolicitation.UpdateStock(quantity);
+
+            await _repository.UpdateAsync(itemsSolicitation);
+
+            return true;
+        }
     }
 }

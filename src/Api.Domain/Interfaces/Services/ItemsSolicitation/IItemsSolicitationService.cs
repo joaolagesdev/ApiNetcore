@@ -10,5 +10,7 @@ namespace Domain.Interfaces.Services.ItemsSolicitation
         Task<ItemsSolicitationDTO> Get(Guid id);
         Task<IEnumerable<ItemsSolicitationDTO>> GetAll();
         Task<ItemsSolicitationCreateResultDTO> Post(ItemsSolicitationCreateDTO product);
+        
+        Task<bool> CalculateTotalValue(Guid productId, int quantity);
     }
 }

@@ -64,6 +64,9 @@ namespace Application.Controllers
 
             try
             {
+
+                await _service.CalculateTotalValue(itemsSolicitation.ProductId, itemsSolicitation.Quantity);
+
                 var result = await _service.Post(itemsSolicitation);
 
                 if (result != null)

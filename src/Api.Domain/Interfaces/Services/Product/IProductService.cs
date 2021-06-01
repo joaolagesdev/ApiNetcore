@@ -13,5 +13,8 @@ namespace Domain.Interfaces.Services.Product
         Task<ProductCreateResultDTO> Post(ProductCreateDTO product);
         Task<ProductUpdateResultDTO>Put(ProductUpdateDTO product);
         Task<bool> Delete(Guid id);
+
+        Task<bool> DebitQuantity(Guid productId, int quantity);
+        Task<bool> IncreaseQuantity(Guid productId, int quantity);
     }
 }

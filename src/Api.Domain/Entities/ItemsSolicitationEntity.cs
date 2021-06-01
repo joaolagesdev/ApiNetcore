@@ -16,6 +16,14 @@ namespace Domain.Entities
         public ProductEntity Product { get; set; }
         public SolicitationEntity Solicitation { get; set; }
 
-        // 2 TABELAS - PRODUTO E ITENS
+        public void CalculateTotalValue(int quantity)
+        {
+            TotalValue = quantity * Product.Price;
+        }
+
+        public void UpdateStock(int quantity)
+        {
+            Product.DebitQuantity(quantity);
+        }
     }
 }
